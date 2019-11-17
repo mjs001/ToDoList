@@ -15,7 +15,7 @@ export default function DemoComponent() {
     e.target.reset();
   }
   function removeTodo(id) {
-    setTodos(todos.filter(todo => todo.id != id));
+    setTodos(todos.filter(todo => todo.id !== id));
   }
   return (
     <div className="demo-component">
@@ -25,11 +25,11 @@ export default function DemoComponent() {
           placeholder="What am I TODO today?"
           onChange={handleNewTodoChange}
         />
-        <ul>
+        <ul className="list">
           {todos.map(todo => (
-            <li key={todo.id}>
+            <li className="listItem" key={todo.id}>
               {todo.text}
-              <a href="#" onClick={() => removeTodo(todo.id)}>
+              <a href="#" className="X" onClick={() => removeTodo(todo.id)}>
                 X
               </a>
             </li>

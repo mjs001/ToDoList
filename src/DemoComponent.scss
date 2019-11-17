@@ -1,10 +1,54 @@
 .demo-component {
   width: 600px;
   height: 100%;
-  background: maroon;
+  background-image: linear-gradient(
+    rgba(151, 10, 10, 0.548),
+    rgba(250, 19, 2, 0.945)
+  );
   margin: 0 auto;
-  box-shadow: inset 0px 0 3px 7px rgba(218, 149, 149, 0.5);
-  form {
-    padding-bottom: 5%;
+  border: solid 3px rgb(243, 198, 198);
+  box-shadow: inset 0px 0 1px 7px rgba(218, 149, 149, 0.5);
+  h1 {
+    color: #d7ceb2;
+    text-shadow: 3px 3px 3px #2c2e38, 5px 5px 0px #5c5f72;
+    font: 3rem "BazarMedium";
+    letter-spacing: 10px;
+  }
+}
+form {
+  padding-bottom: 5%;
+  input {
+    width: 80%;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: rgba(248, 190, 190, 0.904);
+    font-size: 1.5rem;
+  }
+}
+.listItem {
+  color: #fff;
+  text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777,
+    0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333,
+    0px 8px 7px #001135;
+  font: 1.8rem "ChunkFiveRegular";
+  text-decoration: underline;
+  padding: 5%;
+  .X {
+    margin-left: 5%;
+    display: inline-block;
+    padding: 8px;
+    border: 2px solid #ffc44f;
+    border-radius: 6px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), inset 0 2px 1px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    text-shadow: 0px 1px 1px #4d4d4d;
+    color: #222;
+    font: 0.8rem "LeagueGothicRegular";
+    font-style: bold;
+    background: rgb(238, 128, 100);
+    &:hover {
+      border-color: rgb(150, 150, 8);
+      background: rgb(172, 53, 53);
+    }
   }
 }
