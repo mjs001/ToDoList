@@ -12,7 +12,10 @@ export default function DemoComponent() {
     e.preventDefault();
     if (newTodo === "") return;
     setTodos([...todos, { id: Date.now(), text: newTodo }]);
-    e.target.reset;
+    e.target.reset();
+  }
+  function removeTodo(id) {
+    setTodos(todos.filter(todo => todo.id != id));
   }
   return (
     <div className="demo-component">
@@ -24,7 +27,12 @@ export default function DemoComponent() {
         />
         <ul>
           {todos.map(todo => (
-            <li key={todo.id}>todo.text</li>
+            <li key={todo.id}>
+              {todo.text}
+              <a href="#" onClick={() => removeTodo(todo.id)}>
+                X
+              </a>
+            </li>
           ))}
         </ul>
       </form>
